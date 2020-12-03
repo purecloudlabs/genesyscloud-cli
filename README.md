@@ -6,10 +6,11 @@ The Genesys Cloud cli is a tool to interact with [Genesys Cloud](https://develop
 
 Note that if you us oh-my-zsh, it aliases gc to a git command, this cli works using either gc or gcli if you are using that alias. 
 
-## Install
-
+## Running locally
 ```
-pip install genesyscloudcli
+$ virtualenv venv
+$ . venv/bin/activate
+$ pip install --editable .
 ```
 
 ## Local setup
@@ -83,10 +84,3 @@ Some commands require bodies to be sent with the request, such as creating a new
     ```
     $ echo "{\"name":\"Joe Smith\"}" | gc user new
     ```
-
-## Testing locally
-```
-$ virtualenv venv
-$ . venv/bin/activate
-$ pip install --editable .
-```
